@@ -1,0 +1,161 @@
+:root {
+    --grey: #444444;
+    --white: #ffffff;
+    --blue: #01d0cd;
+}
+
+html {
+    background-color: var(--grey);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center, h2{
+    width: 20%;
+    display: flex;            
+    justify-content: center;    
+    align-items: center;    
+}
+
+.logo {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.description, div, details, h2{
+    width: 65%;
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center; 
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+}
+
+.desscription {
+    width: 65%;
+    display: flex;
+    margin-left: 17%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin:  50px auto 20px auto;
+}
+
+a {
+    text-decoration: none; /* Link-Stil anpassen, z. B. Unterstreichung entfernen */
+    color: var(--blue); /* Link-Farbe festlegen */
+    margin: 5px 0; /* Abstände zwischen Links */
+}
+
+.description a:hover, details a:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+input {
+    display: flex;
+    margin: 400px, auto; 
+    width: 250px; 
+    height: 40px; 
+    padding: 10px;
+    font-size: 16px;
+}
+
+.extra-margin {
+    margin: 50px auto;
+}
+
+button {
+    height: 10%;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid var(--white)
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;    
+    margin: 30px;   
+}
+
+.svg {
+    width: 25%;
+    margin: 50px;
+}
+
+details {
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    max-height: 1.5em; 
+    opacity: 1;
+    transform: translateY(-10px);
+    margin: 40px auto;
+  }
+
+summary {
+    cursor: pointer;
+    font-size: 1.2em;
+    
+    margin-bottom: 20px auto;
+}
+  
+  details[open] {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0);
+    margin: 35px auto;
+  }
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5vw;
+    padding-bottom: 5vw;
+    
+}
+
+.fa-brands {
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
+
+.fa-brands:hover {
+    color: var(--blue);
+}
+
+@media screen and (orientation: portrait) {
+    summary {
+        margin: 35px auto;
+    }
+    details {
+        margin: 75px auto;
+    }
+}
