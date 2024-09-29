@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/blueleafstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Project BlueLeaf</title>
+</head>
+    <body>
+        <main>
+            <script src="src/ethers-5.6.umd.min.js"></script>
+            <script type="module" src="src/index.js"></script>
+            <img class="logo" src="../BlueLeafImage/logo.png" alt="BlueLeaf Logo">
+            <p class="description">The BlueLeaf Foundation™ offers donors a unique NFT in return for their contribution to the 
+                <a href="https://seatrees.org/">
+                    Seatrees
+                </a> organization, which is dedicated to combating climate change. The process is fully transparent, secure, and traceable, thanks to blockchain technology, and every donation has a measurable impact. To trace your donation, visit the 
+                <a href="https://sepolia.etherscan.io/address/0x5339FaAE73CC1f7eB6ad935edc094E1576b197Ef#code">sea</a>
+                 or 
+                 <a href="https://sepolia.etherscan.io/address/0xAAda5203396E76C408AB72d146ffD2c03c183EBf#code">tree</a> 
+                 smart contract. At the moment everything runs on the <a href="https://sepolia.etherscan.io">sepolia blockchain</a>, a testnet of ethereum. 
+            </p>
+            <h2>Donate</h2>
+            <input class="extra-margin" id="donationAmount" type="number" placeholder="Enter donation amount in ETH">
+            <section>
+                <button class="" id="mintButtonTree" onclick="myApp.executeMintNFTAndDonateTree()">Connect, Donate and get Tree NFT</button>
+                <img class="svg" src="/img/tree.svg">
+            </section>
+            <section>
+                <img class="svg" src="/img/sea.svg">
+                <button id="mindButtonSea" onclick="myApp.executeMintNFTAndDonateSea()">Connect, Donate and  Sea NFT</button>
+            </section>
+            <h2>FAQ</h2>
+                <details>
+                  <summary>I have no idea what this website does. Can you explain it to me?</summary>
+                  <div>
+                    This website lets you donate to protect rainforests. You connect your digital wallet (like MetaMask), choose how much to donate, and in return, you get a unique digital collectible (NFT). The whole process is secure and transparent, thanks to blockchain technology.
+                  </div>
+                </details>
+                <details>
+                    <summary>Which type of wallet can I use?</summary>
+                    <div>
+                      Unfortunately, only MetaMask is supported at the moment. <a href="https://metamask.io/">Here</a> you can download it.
+                    </div>
+                </details>
+                <details>
+                    <summary>I see only two pictures—how is every NFT unique?</summary>
+                    <div>
+                        Each NFT has its own unique Token ID stored on the blockchain. Even if the images are the same, the Token ID ensures every NFT is distinct and traceable.
+                    </div>
+                  </details>
+                  <details>
+                    <summary>At the moment this contract runs only on testnetworks - Where can I get the test tokens?</summary>
+                    <div>
+                        You can get test tokens for the sepolia testnet <a href="https://www.alchemy.com/faucets/ethereum-sepolia">here</a>. Or you can just lool up in the browser for sepolia faucet. 
+                    </div>
+                  </details>
+                  <details>
+                    <summary>I made everything right, but I didn't reveive my NFT. What can I do?</summary>
+                    <div>
+                      Make sure that in your settings on metamask in privacy and security "Automatically detect NFTs" is enabled; otherwise, you can try to import your NFT thrght the TokenID and the Tree or Sea contract. As last option, contact me!
+                    </div>
+                  </details>
+        </main>
+        <footer>
+            <h2>Contact</h2>
+            <div class="icons">
+                <a href="https://github.com/save-the-planet08/">
+                    <i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/frederik-pietratus">
+                    <i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://t.me/save_the_planet07">
+                <i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </footer>
+    </body>
+</html>
