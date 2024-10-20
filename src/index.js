@@ -1,8 +1,17 @@
 
 
 async function connect() {
-    if (window.ethereum !== "undefined") {
-       await ethereum.request({ method: 'eth_requestAccounts' });
+    if (typeof window.ethereum !== "undefined" && window.ethereum.isMetaMask) {
+        try {
+            const accounts = await window.ethereum.request({
+                method: 'eth_requestAccounts'
+            });
+            console.log("Connected to MetaMask:", accounts);
+        } catch (error) {
+            console.error("MetaMask connection failed:", error);
+        }
+    } else {
+        console.log("MetaMask is not installed. Please install MetaMask.");
     }
 }
 
