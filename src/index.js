@@ -4,7 +4,8 @@ async function connect() {
     if (typeof window.ethereum !== "undefined" && window.ethereum.isMetaMask) {
         try {
             const accounts = await window.ethereum.request({
-                method: 'eth_requestAccounts'
+                method: 'wallet_requestPermissions',
+                params: [{ eth_accounts: {} }]
             });
             console.log("Connected to MetaMask:", accounts);
         } catch (error) {
