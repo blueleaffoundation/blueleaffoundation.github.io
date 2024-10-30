@@ -33,10 +33,12 @@ function submitDonation() {
 async function executeMintNFTAndDonateTree() {
     try {
 
-        const accounts = await connect();
-        if (!accounts) {
-            alert("Please connect to MetaMask to proceed.");
-            return;
+        if (!window.ethereum.selectedAddress) {
+            const accounts = await connect();
+            if (!accounts) {
+                alert("Please connect to MetaMask to proceed.");
+                return;
+            }
         }
         
         const contractAddrTree = '0xAAda5203396E76C408AB72d146ffD2c03c183EBf';
